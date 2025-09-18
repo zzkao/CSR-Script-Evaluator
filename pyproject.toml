@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CSR-Script-Evaluator"
+version = "0.1.0"
+description = "My awesome project"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Zhaomeng Chen", email = "zhaochen@ucla.edu" }
+]
+dependencies = [
+    "anthropic"
+]
+
+[project.scripts]
+csr-eval = "csr_script_evaluator.eval:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+csr_script_evaluator = ["data/*"]
