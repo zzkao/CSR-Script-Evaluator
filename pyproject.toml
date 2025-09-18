@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "CSR-Script-Evaluator"
-version = "0.1.0"
+version = "1.0.0"
 description = "My awesome project"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-csr-eval = "csr_script_evaluator.eval:main"
+csr-eval = "csr_script_evaluator.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,10 +1,9 @@
 from typing import Optional
 
 class Action:
-    def __init__(self, command: str, agent_name: str, description: Optional[str] = None, ):
+    def __init__(self, command: str,  description: Optional[str] = None, ):
         self.command = command
         self.description = description
-        self.agent_name = agent_name
     
     def to_dict(self):
         return {"command": self.command, "description": self.description}
@@ -24,19 +23,16 @@ class Action:
         return "\n".join(" " * spaces + line for line in text.splitlines())
 
 class State:
-    def __init__(self, action: Action, output: str):
+    def __init__(self, action: Action, output: str, eval: str):
         self.action = action
         self.output = output
-        self.eval = None
+        self.eval = eval
     
     def to_dict(self):
         if self.eval:
             return {"action": self.action.to_dict(), "output": self.output, "eval": self.eval}
         else:
             return {"action": self.action.to_dict(), "output": self.output}
-    
-    def set_eval(self, eval):
-        self.eval = eval
 
     def __str__(self):
         if self.eval:
