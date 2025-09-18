@@ -1,1 +1,1 @@
-from .eval import main
+from .main import main
