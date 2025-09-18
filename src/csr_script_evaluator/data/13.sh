@@ -1,15 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-curl -o ~/miniconda.sh -O https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-chmod +x ~/miniconda.sh
-./miniconda.sh
-source ~/.bashrc
-conda install git
-git clone https://github.com/graphdeeplearning/graphtransformer.git
-cd graphtransformer
-conda env create -f environment_cpu.yml
-conda activate graph_transformer
-mkdir -p data/molecules data/SBMs out/ZINC_sparse_LapPE_BN/results out/ZINC_sparse_LapPE_BN/checkpoints out/ZINC_sparse_LapPE_BN/logs
 
 # Data / Checkpoint / Weight Download (URL)
 cd data/

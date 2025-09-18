@@ -1,16 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/elliottwu/unsup3d.git
-cd unsup3d
-source ~/anaconda3/etc/profile.d/conda.sh
-conda env create -f environment.yml
-conda activate unsup3d
-conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=9.2 -c pytorch
-pip install neural_renderer_pytorch
-pip install facenet-pytorch
-conda install gxx_linux-64=7.3
-git clone https://github.com/daniilidis-group/neural_renderer.git
-cd neural_renderer && python setup.py install && cd ..
 
 # Data / Checkpoint / Weight Download (URL)
 cd data

@@ -1,11 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/MinkaiXu/GeoDiff.git
-cd GeoDiff
-conda env create -f env.yml
-conda activate geodiff
-conda install pytorch-geometric=1.7.2=py37_torch_1.8.0_cu102 -c rusty1s -c conda-forge
-mkdir -p data/GEOM/QM9 data/GEOM/Drugs logs
 
 # Data / Checkpoint / Weight Download (URL)
 wget -O data/GEOM/QM9/train_data_40k.pkl "https://drive.google.com/uc?export=download&id=1b0kNBtck9VNrLRZxg6mckyVUpJA5rBHh"

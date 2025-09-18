@@ -1,15 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-conda install pytorch=1.4.0 torchvision=0.5.0 cudatoolkit=10.0 -c pytorch
-conda install -c conda-forge opencv
-conda install matplotlib scipy scikit-learn
-conda install pyyaml easydict
-conda install termcolor
-git clone https://github.com/wvangansbeke/Unsupervised-Semantic-Segmentation
-cd Unsupervised-Semantic-Segmentation
-pip install apex einops h5py imageio joblib pillow pycocotools pycparser pyquaternion pywavelets scikit-image six tifffile toolz
-mkdir -p /path/to/root/dir
-mkdir -p /path/to/datasets
 
 # Data / Checkpoint / Weight Download (URL)
 wget -O pretrained_supervised_saliency.pth "https://drive.google.com/uc?export=download&id=1UkzAZMBG1U8kTqO3yhO2nTtoRNtEvyRq"

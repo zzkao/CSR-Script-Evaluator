@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install stable release
-pip install alpaca-eval
-
-# Install optional dependencies
-pip install alpaca_eval[all]
-
-# Install development version
-pip install git+https://github.com/tatsu-lab/alpaca_eval
 
 # Data / Checkpoint / Weight Download (URL)
 # No explicit data download commands in README

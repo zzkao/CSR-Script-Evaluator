@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install required packages (versions from README)
-pip install torch>=1.8.0 torchvision>=0.9.0 tensorboard>=1.15.0
-pip install scikit-learn>=0.23.2 numpy>=1.19.2 pandas>=1.1.3 matplotlib>=3.3.2
-
 # Data / Checkpoint / Weight Download (URL)
 # Create dataset directory if not exists
 mkdir -p dataset

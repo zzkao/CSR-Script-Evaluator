@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Set platform and install dependencies
-platform=cpu  # Options: cpu, cu118, cu121, rocm5.7
-make torch-${platform}
-pip install -r requirements/core.${platform}.txt -e .[train,test]
-
-# Update dependency pins (optional)
-pip install pip-tools
-make clean-reqs reqs
 
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory

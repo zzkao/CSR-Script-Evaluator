@@ -1,13 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/charlesCXK/RGBD_Semantic_Segmentation_PyTorch.git
-cd RGBD_Semantic_Segmentation_PyTorch
-conda env create -f rgbd.yaml
-conda activate rgbd
-cd ./furnace/apex
-python setup.py install --cpp_ext --cuda_ext
-cd ../..
-mkdir -p DATA/pytorch-weight DATA/NYUDepthv2/ColoredLabel DATA/NYUDepthv2/Depth DATA/NYUDepthv2/HHA DATA/NYUDepthv2/Label DATA/NYUDepthv2/RGB
 
 # Data / Checkpoint / Weight Download (URL)
 cd DATA/pytorch-weight

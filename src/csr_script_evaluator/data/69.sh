@@ -1,8 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install torch fairscale fire sentencepiece
-pip install -e .
-chmod +x download.sh
 
 # Data / Checkpoint / Weight Download (URL)
 ./download.sh

@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install package from GitHub (requires python>=3.8)
-pip install git+https://github.com/lxuechen/private-transformers.git
-pip install pytest
-
-# Run tests to verify installation (requires pytest and GPU)
-pytest -s tests
 
 # Data / Checkpoint / Weight Download (URL)
 # No explicit data download commands in README

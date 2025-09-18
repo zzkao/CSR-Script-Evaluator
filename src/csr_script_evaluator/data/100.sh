@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-
-
-# Create virtual environment (recommended)
-python -m venv tape_env
-source tape_env/bin/activate
-
-# Install TAPE package
-pip install tape_proteins
 
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory

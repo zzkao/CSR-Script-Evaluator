@@ -1,12 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-conda create -n spark python=3.8 -y
-conda activate spark
-pip install torch==1.10.0+cu113 torchvision==0.11.1+cu113 -f https://download.pytorch.org/whl/torch_stable.html
-pip install timm==0.5.4
-pip install matplotlib numpy Pillow typed-argument-parser tensorboardx
-git clone https://github.com/keyu-tian/SparK.git
-cd SparK
 
 # Data / Checkpoint / Weight Download (URL)
 mkdir -p /data/imagenet/train /data/imagenet/val

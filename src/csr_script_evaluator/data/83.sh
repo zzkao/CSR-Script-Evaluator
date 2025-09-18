@@ -1,18 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-eval "$(conda shell.bash hook)"
-if ! conda env list | grep -q '^raydf '; then
-  conda create -n raydf python=3.8 -y
-fi
-conda activate raydf
-
-if [ ! -d RayDF ]; then
-  git clone https://github.com/vLAR-group/RayDF.git
-fi
-cd RayDF
-
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
-pip install -r requirements.txt
 
 # Data / Checkpoint / Weight Download (URL)
 sh datasets/download.sh blender

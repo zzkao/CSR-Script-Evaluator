@@ -1,15 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/SJTU-IPADS/PowerInfer
-cd PowerInfer
-pip install -r requirements.txt
-pip install numpy>=1.24.4 sentencepiece>=0.1.98 transformers>=4.33.2
-cmake -S . -B build
-cmake --build build --config Release
-cmake -S . -B build -DLLAMA_CUBLAS=ON
-cmake --build build --config Release
-CC=/opt/rocm/llvm/bin/clang CXX=/opt/rocm/llvm/bin/clang++ cmake -S . -B build -DLLAMA_HIPBLAS=ON -DAMDGPU_TARGETS=gfx1100
-cmake --build build --config Release
+
 
 # Data / Checkpoint / Weight Download (URL)
 huggingface-cli download --resume-download --local-dir ReluLLaMA-7B --local-dir-use-symlinks False PowerInfer/ReluLLaMA-7B-PowerInfer-GGUF

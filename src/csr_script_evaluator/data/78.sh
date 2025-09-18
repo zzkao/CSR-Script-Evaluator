@@ -1,12 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-export OPENAI_API_KEY=YOUR_API_KEY
-pip install tree-of-thoughts-llm
-git clone https://github.com/princeton-nlp/tree-of-thought-llm
-cd tree-of-thought-llm
-pip install -r requirements.txt
-pip install -e .
-pip install aiohttp==3.8.4 aiosignal==1.3.1 async-timeout==4.0.2 attrs==23.1.0 backoff==2.2.1 certifi==2023.5.7 charset-normalizer==3.1.0 frozenlist==1.3.3 idna==3.4 mpmath==1.3.0 multidict==6.0.4 numpy==1.24.3 openai==0.27.7 requests==2.31.0 sympy==1.12 tqdm==4.65.0 urllib3==2.0.2 yarl==1.9.2 pandas==2.0.3
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: This framework uses built-in tasks and data, no external downloads needed

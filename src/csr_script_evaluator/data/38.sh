@@ -1,20 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-conda env create -f environment.yml
-conda activate multiperson
-git clone https://github.com/JiangWenPL/multiperson
-cd multiperson
-cd neural_renderer/
-python3 setup.py install
-cd ../mmcv
-python3 setup.py install
-cd ../mmdetection
-./compile.sh
-python setup.py develop
-cd ../sdf
-python3 setup.py install
-mkdir -p mmdetection/data
-mkdir -p mmdetection/work_dirs
 
 # Data / Checkpoint / Weight Download (URL)
 wget -O mmdetection/data/model_data.zip "https://drive.google.com/uc?export=download&id=1y5aKzW9WL42wTfQnv-JJ0YSIgsdb_mJn"

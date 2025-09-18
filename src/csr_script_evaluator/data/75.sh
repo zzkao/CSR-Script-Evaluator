@@ -1,10 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-python3 -m venv env
-source env/bin/activate
-pip install -r requirements.txt
-pip install ipykernel==6.23.1 numpy==1.24.3 tokenizers==0.13.3 torch==2.0.1 tqdm==4.65.0 transformers==4.29.2 datasets==2.12.0 beautifulsoup4==4.12.2 wandb==0.15.3 hydra-core==1.3.2 tensor-parallel==1.2.4
-ulimit -n 64000
+
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: Datasets are downloaded automatically during training

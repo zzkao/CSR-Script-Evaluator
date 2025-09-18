@@ -1,12 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/JosephKJ/OWOD.git
-cd OWOD
-python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
-python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.6/index.html
-pip install torch torchvision opencv-python
-mkdir -p datasets/VOC2007 output feature_store
-
 # Data / Checkpoint / Weight Download (URL)
 curl -L -o models_and_data.zip "https://drive.google.com/uc?export=download&id=1S5L-YmIiFMAKTs6nHMorB0Osz5iWI31k"
 unzip models_and_data.zip

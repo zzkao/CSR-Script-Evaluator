@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create Python 3.6 environment (using conda)
-conda create -n dsin python=3.6
-conda activate dsin
-
-# Install dependencies
-pip install -r requirements.txt
-
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory
 mkdir -p raw_data

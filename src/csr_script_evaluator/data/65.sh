@@ -1,6 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install -r requirements.txt
+
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: Data and weights are automatically downloaded from Hugging Face Hub when running the scripts

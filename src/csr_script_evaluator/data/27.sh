@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Clone repository
-git clone git@github.com:bertjiazheng/Structured3D.git
-cd Structured3D
-
-# Install dependencies
-conda install -y open3d -c open3d-admin
-conda install -y opencv -c conda-forge
-conda install -y descartes matplotlib numpy shapely
-pip install panda3d
-
 # Data / Checkpoint / Weight Download (URL)
 # Note: Dataset requires filling agreement form at https://forms.gle/LXg4bcjC2aEjrL9o8
 # After approval, download and extract dataset to /path/to/dataset

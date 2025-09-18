@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install required packages
-pip install mtcnn
-conda install -c conda-forge moviepy
-conda install -c cogsci pygame
-conda install -c conda-forge requests
-conda install -c conda-forge pytables
-
-# Create data directory
-mkdir -p data
-
 # Data / Checkpoint / Weight Download (URL)
 # Download and preprocess datasets
 cd data

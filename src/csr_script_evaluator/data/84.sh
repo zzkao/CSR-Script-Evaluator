@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-conda create --name tsdiff --yes python=3.8 && conda activate tsdiff
-pip install --editable "."
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: The repository doesn't explicitly provide data download commands

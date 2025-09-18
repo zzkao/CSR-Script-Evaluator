@@ -1,15 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-python --version
-python -m pip install --upgrade pip
-pip install gptcache
-git clone -b dev https://github.com/zilliztech/GPTCache.git
-cd GPTCache
-pip install -r requirements.txt
-python setup.py install
-pip install numpy cachetools requests
-export OPENAI_API_KEY=YOUR_API_KEY
-echo $OPENAI_API_KEY
+
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: GPTCache automatically downloads required models and embeddings when needed

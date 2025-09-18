@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# For LRV-V1 (MiniGPT4-based)
-git clone https://github.com/FuxiaoLiu/LRV-Instruction.git
-cd LRV-Instruction
-conda env create -f environment.yml --name LRV
-conda activate LRV
-
 # For LRV-V2 (mplug-owl-based)
 # Install mplug-owl dependencies according to their repo
 

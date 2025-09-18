@@ -1,16 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/YyzHarry/imbalanced-regression.git
-cd imbalanced-regression
-conda create -n sts python=3.6 -y
-conda activate sts
-pip install --upgrade pip
-pip install torch torchvision tensorboard_logger numpy pandas scipy tqdm matplotlib pillow wget gdown tensorboardX scikit-learn ipdb
-pip install --upgrade jupyter notebook
-conda install pytorch=0.4.1 cuda92 -c pytorch -y
-pip install nltk wget ipdb scikit-learn allennlp==0.5.0
-pip install overrides==3.1.0
-mkdir -p imdb-wiki-dir/data agedb-dir/data nyud2-dir/data sts-b-dir/glue_data/STS-B
 
 # Data / Checkpoint / Weight Download (URL)
 cd imdb-wiki-dir

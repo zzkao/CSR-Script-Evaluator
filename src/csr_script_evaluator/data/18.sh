@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Option 1: Using conda environment file
-conda env create -f env.yml
-conda activate dpm-pc-gen
-
-# Option 2: Manual installation for CUDA 11+ (install required packages)
-conda install pytorch>=1.7.0 cudatoolkit=11.0 -c pytorch
-conda install h5py tqdm tensorboard=2.5.0 numpy=1.20.2 scipy=1.6.2 scikit-learn=0.24.2
-
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory
 mkdir -p data

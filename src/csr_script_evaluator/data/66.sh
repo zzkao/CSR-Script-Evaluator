@@ -1,10 +1,6 @@
 
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install torch fairscale fire tiktoken==0.4.0 blobfile
-pip install -e .
-pip install huggingface-hub
-chmod +x download.sh
+
 
 # Data / Checkpoint / Weight Download (URL)
 ./download.sh

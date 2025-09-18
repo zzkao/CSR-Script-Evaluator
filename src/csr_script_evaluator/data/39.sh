@@ -1,20 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/Owen-Liuyuxuan/visualDet3D
-cd visualDet3D
-pip3 install -r requirement.txt
-pip3 install numpy torch torchvision pillow scikit-image fire matplotlib opencv-python numba easydict tensorflow cython tqdm pyquaternion
-chmod +x make.sh
-./make.sh
-mkdir -p workdirs
-mkdir -p workdirs/Mono3D
-mkdir -p workdirs/Mono3D/log
-mkdir -p workdirs/Mono3D/checkpoint
-mkdir -p workdirs/Mono3D/output
-mkdir -p workdirs/Mono3D/output/training
-mkdir -p workdirs/Mono3D/output/validation
-mkdir -p data/kitti_obj/training
-mkdir -p data/kitti_obj/testing
 
 # Data / Checkpoint / Weight Download (URL)
 wget -O pretrained_mono3d.pth "https://github.com/Owen-Liuyuxuan/visualDet3D/releases/download/1.0/GroundAware_pretrained.pth"

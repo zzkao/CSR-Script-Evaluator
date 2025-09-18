@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Clone repository and install requirements
-git clone https://github.com/huggingface/naacl_transfer_learning_tutorial
-cd naacl_transfer_learning_tutorial
-pip install -r requirements.txt
-
 # Data / Checkpoint / Weight Download (URL)
 # Data will be automatically downloaded during training
 # wikitext-103 is the default dataset

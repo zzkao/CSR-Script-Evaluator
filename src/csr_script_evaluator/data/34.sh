@@ -1,13 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install torch>=1.1.0 torchvision>=0.3.0
-pip install cython
-git clone https://github.com/jeffffffli/res-loglikelihood-regression
-cd res-loglikelihood-regression
-python setup.py develop
-pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-pip install six terminaltables scipy==1.1.0 opencv-python matplotlib visdom tqdm tensorboardx easydict pyyaml munkres timm==0.1.20 natsort
-mkdir data
 
 # Data / Checkpoint / Weight Download (URL)
 mkdir -p data/coco/annotations

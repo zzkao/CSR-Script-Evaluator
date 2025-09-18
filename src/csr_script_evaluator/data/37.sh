@@ -1,20 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install torch torchvision
-pip install numpy scipy scikit-image opencv-python pillow
-pip install tensorboardX pyyaml
-pip install gdown
-pip install --upgrade gdown
-git clone https://github.com/layumi/Seg-Uncertainty
-cd Seg-Uncertainty
-mkdir -p data/Cityscapes/data/gtFine
-mkdir -p data/Cityscapes/data/leftImg8bit
-mkdir -p data/GTA5/images
-mkdir -p data/GTA5/labels
-mkdir -p data/synthia/RGB
-mkdir -p data/synthia/GT
-mkdir -p data/Oxford_Robot_ICCV19/train
-mkdir -p snapshots
 
 # Data / Checkpoint / Weight Download (URL)
 gdown 1BMTTMCNkV98pjZh_rU0Pp47zeVqF3MEc

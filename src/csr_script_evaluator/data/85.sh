@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install Python 3.8 and required packages
-conda create --name ontoprotein python=3.8 --yes && conda activate ontoprotein
-pip install biopython==1.37 goatools
-pip install torch==1.9.0 transformers==4.5.1 deepspeed==0.5.1 lmdb tape-proteins
-
 # Data / Checkpoint / Weight Download (URL)
 # Download pre-training data (ProteinKG25)
 # (Manually) Download from Drive link https://drive.google.com/uc?export=download&id=1iTC2-zbvYZCDhWM_wxRufCvV6vvPk8HR 

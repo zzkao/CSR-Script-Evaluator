@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install stable release
-pip install alpaca-farm
-
-# Install development version
-pip install git+https://github.com/tatsu-lab/alpaca_farm.git
-
-# Set OpenAI API key for evaluations
-export OPENAI_API_KEY="your_api_key"
 
 # Data / Checkpoint / Weight Download (URL)
 # Download pre-trained models (replace paths with actual values)

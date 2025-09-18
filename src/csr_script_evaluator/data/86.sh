@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-python3 -m pip install ".[train]"
-
 # Data / Checkpoint / Weight Download (URL)
 # Download Navier-Stokes dataset
 bash scripts/download_navier_stokes.sh

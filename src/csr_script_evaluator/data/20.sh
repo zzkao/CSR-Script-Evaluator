@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install mimicry package
-pip install git+https://github.com/kwotsin/mimicry.git
-
-# Create directories for data and logs
-mkdir -p ./datasets
-mkdir -p ./log/example
-
 # Data / Checkpoint / Weight Download (URL)
 # Data will be downloaded automatically when loading dataset
 # Example using CIFAR-10 dataset (default)

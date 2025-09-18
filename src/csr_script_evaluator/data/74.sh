@@ -1,14 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/SWE-agent/SWE-agent.git
-cd SWE-agent
-python -m pip install --upgrade pip && pip install --editable .
-curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt-get install -y nodejs
-which python
-python --version
-sweagent --help
-python -m sweagent --help
+
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: SWE-agent uses API models, no model weights to download

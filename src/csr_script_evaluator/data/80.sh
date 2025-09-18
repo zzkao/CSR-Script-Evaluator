@@ -1,14 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install causal-conv1d>=1.4.0
-pip install mamba-ssm
-pip install mamba-ssm[causal-conv1d]
-pip install mamba-ssm[dev]
-git clone https://github.com/state-spaces/mamba
-cd mamba
-pip install . --no-build-isolation
-pip install lm-eval==0.4.2
-sudo patch /opt/rocm/include/hip/amd_detail/amd_hip_bf16.h < rocm_patch/rocm6_0.patch
 
 # Data / Checkpoint / Weight Download (URL)
 # Note: Models are auto-downloaded by the generation scripts from Hugging Face

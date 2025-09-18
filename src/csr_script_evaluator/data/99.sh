@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install required packages
-pip install torch==1.7.0 torchvision==0.8.1
-pip install advertorch==0.2.2 pretrainedmodels==0.7.4
 
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory and download dataset

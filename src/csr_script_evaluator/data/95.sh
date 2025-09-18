@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install PyTorch and dependencies (tested versions)
-pip install torch==2.1.0.dev20230514+cu118 -f https://download.pytorch.org/whl/nightly/cu118/torch_nightly.html
-
-pip install transformers==4.28.1
-pip install accelerate==0.17.1
-
 # Data / Checkpoint / Weight Download (URL)
 # Download and prepare datasets for medium models
 cd data && bash download_dataset.sh && cd ..

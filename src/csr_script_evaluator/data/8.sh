@@ -1,16 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation.
-conda create -n hybrik python=3.8 -y
-conda activate hybrik
-conda install pytorch==1.9.1 torchvision==0.10.1 -c pytorch
-conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-conda install -c bottler nvidiacub
-pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
-git clone https://github.com/Jeff-sjtu/HybrIK.git
-cd HybrIK
-pip install pycocotools
-pip install numpy six terminaltables scipy cython opencv-python==4.1.2.30 matplotlib tqdm easydict chumpy pyyaml tb-nightly future ffmpeg-python joblib
-python setup.py develop
 
 # Data / Checkpoint / Weight Download (URL)
 curl -L -o model_files.zip "https://drive.google.com/uc?export=download&id=1un9yAGlGjDooPwlnwFpJrbGHRiLaBNzV"

@@ -1,11 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/YyzHarry/imbalanced-semi-self.git
-cd imbalanced-semi-self
-pip install torch>=1.2 torchvision
-pip install pyyaml scikit-learn tensorboardX
-mkdir -p data log checkpoint
-mkdir -p data/cifar-10-batches-py data/svhn data/imagenet data/inat2018
 
 # Data / Checkpoint / Weight Download (URL)
 wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz -P data/

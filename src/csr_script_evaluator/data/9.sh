@@ -1,10 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/wyhuai/DDNM.git
-cd DDNM
-pip install numpy torch blobfile tqdm pyYaml pillow
-mkdir -p exp/logs/celeba exp/logs/imagenet exp/datasets/celeba exp/datasets/imagenet exp/datasets/celeba_hq exp/datasets/solvay exp/datasets/oldphoto exp/inp_masks hq_demo/data/pretrained hq_demo/data/datasets/gts/inet256
-
 # Data / Checkpoint / Weight Download (URL)
 wget -O exp/logs/celeba/celeba_hq.ckpt "https://drive.google.com/uc?export=download&id=1wSoA5fm_d6JBZk4RZ1SzWLMgev4WqH21"
 wget -O exp/logs/imagenet/256x256_diffusion_uncond.pt "https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt"

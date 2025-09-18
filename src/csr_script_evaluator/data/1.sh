@@ -1,11 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install knowledge-storm
-git clone https://github.com/stanford-oval/storm.git
-cd storm
-conda create -n storm python=3.11
-conda activate storm
-pip install -r requirements.txt
 
 # Data / Checkpoint / Weight Download (URL)
 # No explicit download commands found - datasets are available on HuggingFace but accessed via API

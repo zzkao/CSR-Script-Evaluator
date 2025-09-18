@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-pip install -r requirements.txt
-
 # Data / Checkpoint / Weight Download (URL)
 # Download and setup SciERC dataset
 wget http://nlp.cs.washington.edu/sciIE/data/sciERC_processed.tar.gz

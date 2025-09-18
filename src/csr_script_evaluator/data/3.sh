@@ -1,37 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-
-# Install ROS (assuming Ubuntu - using melodic as default)
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt update
-sudo apt install ros-melodic-desktop-full -y
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-
-# Install ROS dependencies
-sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
-sudo rosdep init
-rosdep update
-
-# Create catkin workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
-catkin_make
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-
-# Install GTSAM library (Georgia Tech Smoothing and Mapping library, 4.0.0-alpha2)
-wget -O ~/Downloads/gtsam.zip https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip
-cd ~/Downloads/ && unzip gtsam.zip -d ~/Downloads/
-cd ~/Downloads/gtsam-4.0.0-alpha2/
-mkdir build && cd build
-cmake ..
-sudo make install
-
-# Install additional ROS packages
-sudo apt install ros-melodic-pcl-ros ros-melodic-pcl-conversions ros-melodic-cv-bridge ros-melodic-tf ros-melodic-image-transport -y
-
 # Data / Checkpoint / Weight Download (URL)
 
 # Download Jackal dataset (sample bag files)

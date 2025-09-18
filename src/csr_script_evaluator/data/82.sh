@@ -1,10 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install torch==1.3.1 torchvision==0.4.0
-pip install torch-scatter==1.1.2 torch-sparse==0.4.0 torch-cluster==1.2.4
-pip install torch-geometric==1.1.2
-pip install nltk comet-ml
-python -c "import nltk; nltk.download('stopwords')"
 
 # Data / Checkpoint / Weight Download (URL)
 # Datasets are included in the repository under /data/corpus

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install dependencies
-pip install -r requirements.txt
 
 # Data / Checkpoint / Weight Download (URL)
 # Create data directories

@@ -1,18 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install llama-cookbook
-pip install llama-cookbook[tests,auditnlg,vllm,langchain]
-git clone git@github.com:meta-llama/llama-cookbook.git
-cd llama-cookbook
-pip install -U pip setuptools
-pip install -e .
-pip install -e .[tests,auditnlg,vllm]
-huggingface-cli login
-pip freeze | grep transformers
-git clone git@github.com:huggingface/transformers.git
-cd transformers
-pip install protobuf
-export CUDA_VISIBLE_DEVICES=0
 
 # Data / Checkpoint / Weight Download (URL)
 wget -P ../../src/llama_cookbook/datasets https://raw.githubusercontent.com/tatsu-lab/stanford_alpaca/main/alpaca_data.json

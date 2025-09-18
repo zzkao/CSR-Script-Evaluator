@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create and activate Python environment
-conda create -n class_balanced_loss python=3.6
-conda activate class_balanced_loss
-
-# Install dependencies
-pip install tensorflow==1.14
-
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory
 mkdir -p data

@@ -1,11 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-cd $HOME && git clone https://github.com/mistralai/mistral-finetune.git
-cd mistral-finetune
-pip install -r requirements.txt
-pip install pandas pyarrow
-pip install wandb
-pip install mistral_inference
+
 
 # Data / Checkpoint / Weight Download (URL)
 mkdir -p ${HOME}/mistral_models

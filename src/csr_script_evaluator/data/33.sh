@@ -1,23 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-export PATH=/usr/local/cuda-11.3/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64:$LD_LIBRARY_PATH
-conda create -y -n ssdnerf python=3.7
-conda activate ssdnerf
-conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
-pip install -U openmim
-mim install mmcv-full==1.6
-git clone https://github.com/open-mmlab/mmgeneration && cd mmgeneration && git checkout v0.7.2
-pip install -v -e .
-cd ..
-git clone https://github.com/Lakonik/SSDNeRF && cd SSDNeRF
-pip install -r requirements.txt
-pip install apex==0.9.10dev dearpygui==1.8.0 einops==0.6.0 lpips==0.1.4 matplotlib numpy opencv_python packaging PyMCubes==0.1.2 scipy==1.7.3 setuptools six tqdm trimesh==3.16.2 tensorboard videoio
-cd lib/ops/raymarching/
-pip install -e .
-cd ../shencoder/
-pip install -e .
-cd ../../..
 
 # Data / Checkpoint / Weight Download (URL)
 mkdir -p ./data/shapenet

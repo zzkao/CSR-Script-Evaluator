@@ -1,33 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create and activate conda environment
-conda create -n bcnet python=3.7 -y
-source activate bcnet
-
-# Install PyTorch and dependencies
-conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch
-pip install ninja yacs cython matplotlib tqdm
-pip install opencv-python==4.4.0.40
-pip install scikit-image
-
-# Set installation directory
-export INSTALL_DIR=$PWD
-
-# Install COCO API
-cd $INSTALL_DIR
-git clone https://github.com/cocodataset/cocoapi.git
-cd cocoapi/PythonAPI
-python setup.py build_ext install
-
-# Install BCNet
-cd $INSTALL_DIR
-git clone https://github.com/lkeab/BCNet.git
-cd BCNet/
-python3 setup.py build develop
-
-unset INSTALL_DIR
-
 # Data / Checkpoint / Weight Download (URL)
 # Create and setup dataset directories
 mkdir -p datasets/coco

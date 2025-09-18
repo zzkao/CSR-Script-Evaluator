@@ -1,18 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-git clone https://github.com/xuchen-ethz/snarf.git
-cd snarf
-conda env create -f environment.yml
-conda activate snarf
-python setup.py install
-
-# Additional dependencies
-git clone https://github.com/NVIDIAGameWorks/kaolin
-cd kaolin
-git checkout v0.9.0
-python setup.py develop
-cd ..
 
 # Data / Checkpoint / Weight Download (URL)
 mkdir lib/smpl/smpl_model/

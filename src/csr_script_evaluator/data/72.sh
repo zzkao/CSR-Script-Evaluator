@@ -1,15 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install graphrag
-uv venv --python 3.10
-source .venv/bin/activate
-uv sync --extra dev
-mkdir -p ./ragtest/input
-sudo apt-get install llvm-9 llvm-9-dev
-sudo apt-get install python3.10-dev
-export LLVM_CONFIG=/usr/bin/llvm-config-9
-export GRAPHRAG_LLM_THREAD_COUNT=1
-export GRAPHRAG_EMBEDDING_THREAD_COUNT=1
+
 
 # Data / Checkpoint / Weight Download (URL)
 curl https://www.gutenberg.org/cache/epub/24022/pg24022.txt -o ./ragtest/input/book.txt

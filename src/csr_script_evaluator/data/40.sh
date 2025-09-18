@@ -1,10 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/kach/gradient-descent-the-ultimate-optimizer
-cd gradient-descent-the-ultimate-optimizer
-pip install torch torchvision
-pip install gradient-descent-the-ultimate-optimizer
-mkdir -p data
 
 # Data / Checkpoint / Weight Download (URL)
 # MNIST dataset will be automatically downloaded by torchvision

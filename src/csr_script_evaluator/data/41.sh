@@ -1,14 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/cure-lab/SmoothNet.git
-cd SmoothNet
-export CONDA_ENV_NAME=smoothnet-env
-conda create -n $CONDA_ENV_NAME python=3.6 -y
-eval "$(conda shell.bash hook)"
-conda activate $CONDA_ENV_NAME
-conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cpuonly -c pytorch -y
-pip install tensorboard==2.8.0 pyyaml==6.0 yacs==0.1.8 progress==1.6 smplx==0.1.28 thop==0.0.31.post2005241907 scipy==1.5.4 chumpy==0.70 opencv-python==4.6.0.66 tqdm==4.64.0 matplotlib==3.3.4 trimesh==3.12.7 pyrender==0.1.45
-mkdir -p data/checkpoints data/poses data/smpl results
 
 # Data / Checkpoint / Weight Download (URL)
 wget -O data/checkpoints/aist_vibe_3D_checkpoint.pth.tar "https://drive.google.com/uc?export=download&id=101TH_Z8uiXD58d_xkuFTh5bI4NtRm_cK"

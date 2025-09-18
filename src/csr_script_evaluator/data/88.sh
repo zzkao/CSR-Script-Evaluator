@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install Torch per Pytorch
-pip install -r requirements.txt
-mkdir result
 
 # Data / Checkpoint / Weight Download (URL)
 # Download and prepare datasets

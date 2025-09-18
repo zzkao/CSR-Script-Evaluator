@@ -1,22 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Compile tf_cpn library
-cd mvpose/backend/tf_cpn/lib/
-make
-cd ./lib_kernel/lib_nms
-bash compile.sh
-
-# Compile light_head_rcnn library
-cd mvpose/backend/light_head_rcnn/lib/
-bash make.sh
-
-# Compile pictorial function
-cd mvpose/src/m_lib/
-python setup.py build_ext --inplace
 
 # Data / Checkpoint / Weight Download (URL)
 # Create directories for models and datasets

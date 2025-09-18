@@ -1,33 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create and activate conda environment
-conda create -n transfiner python=3.7 -y
-conda activate transfiner
-
-# Install PyTorch and dependencies
-conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch
-pip install ninja yacs cython matplotlib tqdm
-pip install opencv-python==4.4.0.40
-pip install scikit-image
-pip install kornia==0.5.11
-
-# Set installation directory
-export INSTALL_DIR=$PWD
-
-# Install COCO API
-cd $INSTALL_DIR
-git clone https://github.com/cocodataset/cocoapi.git
-cd cocoapi/PythonAPI
-python setup.py build_ext install
-
-# Install Transfiner
-cd $INSTALL_DIR
-git clone --recursive https://github.com/SysCV/transfiner.git
-cd transfiner/
-python3 setup.py build develop
-
-unset INSTALL_DIR
 
 # Data / Checkpoint / Weight Download (URL)
 # Create and setup dataset directories

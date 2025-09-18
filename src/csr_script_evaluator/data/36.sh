@@ -1,15 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
-conda install pyyaml scikit-image scikit-learn opencv
-git clone https://github.com/inrainbws/transmomo.pytorch
-cd transmomo.pytorch
-pip install -r requirements.txt
-pip install easydict imageio-ffmpeg matplotlib numpy Pillow protobuf PyYAML scikit-image scikit-learn scipy tensorboardX torch>=1.2.0 torchvision tqdm
-mkdir -p data/mixamo/36_800_24/train
-mkdir -p data/mixamo/36_800_24/test
-mkdir -p data/solo_dance/train
-mkdir -p out
 
 # Data / Checkpoint / Weight Download (URL)
 wget -O data/mixamo_data.zip "https://drive.google.com/uc?export=download&id=1lMa-4Bspn2_XV4wqo_s9Bfa35-19UAkB"

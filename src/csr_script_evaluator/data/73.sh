@@ -1,20 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-python --version
-conda create -n metagpt python=3.9 && conda activate metagpt
-pip install --upgrade metagpt
-pip install --upgrade git+https://github.com/geekan/MetaGPT.git
-git clone https://github.com/geekan/MetaGPT && cd MetaGPT && pip install --upgrade -e .
-pip install 'metagpt[rag]'
-pip install 'metagpt[ocr]'
-pip install 'metagpt[search-ddg]'
-pip install 'metagpt[selenium]'
-npm install -g @mermaid-js/mermaid-cli
-pip install pyppeteer
-pip install playwright
-playwright install --with-deps chromium
-export PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
-metagpt --init-config
 
 # Data / Checkpoint / Weight Download (URL)
 mkdir -p ~/.metagpt

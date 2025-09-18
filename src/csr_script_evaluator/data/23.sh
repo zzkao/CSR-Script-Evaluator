@@ -1,21 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create and setup virtual environment
-git clone https://github.com/SimonKohl/probabilistic_unet.git .
-cd prob_unet/
-virtualenv -p python3 venv
-source venv/bin/activate
-pip3 install -e .
-
-# Install batch-generators and dependencies
-cd ..
-git clone https://github.com/MIC-DKFZ/batchgenerators
-cd batchgenerators
-pip3 install nilearn scikit-image nibabel
-pip3 install -e .
-cd prob_unet
-
 # Data / Checkpoint / Weight Download (URL)
 # Create data directories
 mkdir -p data/cityscapes

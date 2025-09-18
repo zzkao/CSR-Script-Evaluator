@@ -1,28 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create 
-git clone --recurse-submodules https://github.com/HazyResearch/hyena-dna.git 
-cd hyena-dna 
-
-# Create conda environment
-conda create -n hyena-dna python=3.8
-conda activate hyena-dna
-
-# Install PyTorch with CUDA
-conda install pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cuda=11.7 -c pytorch -c nvidia
-
-# Install requirements
-pip install -r requirements.txt
-
-# Install Flash Attention
-git submodule update --init
-cd flash-attention
-git submodule update --init
-pip install -e . --no-build-isolation
-
-# Optional: Install fused layers for speed Note:path not set
-cd csrc/layer_norm && pip install . --no-build-isolation && cd ../../..
 
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory and download HG38 data

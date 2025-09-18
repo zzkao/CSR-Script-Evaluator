@@ -1,9 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install torch>=1.4
-pip install pandas
-pip install tensorboardX
-python -m mdlt.scripts.download --data_dir ./data
 
 # Data / Checkpoint / Weight Download (URL)
 # CSV files for train/val/test splits are provided in mdlt/dataset/split/

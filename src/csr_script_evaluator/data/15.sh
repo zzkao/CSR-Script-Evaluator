@@ -1,12 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/bnu-wangxun/Deep_Metric.git
-cd Deep_Metric
-pip install torch==1.0.0 torchvision==0.2.1
-pip install numpy scipy matplotlib pillow tqdm
-mkdir -p data ckps result
-mkdir -p ckps/Weight ckps/Weight/cub ckps/Weight/car196
-mkdir -p result/Weight result/Weight/cub result/Weight/car196
 
 # Data / Checkpoint / Weight Download (URL)
 cd data

@@ -1,9 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-conda create -n LTSF_Linear python=3.6.9
-conda activate LTSF_Linear
-pip install -r requirements.txt
-
 # Data / Checkpoint / Weight Download (URL)
 mkdir dataset
 # Note: Download datasets from Google Drive: https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy

@@ -1,11 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip install mistral-inference
-cd $HOME && git clone https://github.com/mistralai/mistral-inference
-cd $HOME/mistral-inference && poetry install .
-pip install packaging mamba-ssm causal-conv1d transformers
-pip install --upgrade mistral-common
-pip install xformers>=0.0.24 simple-parsing>=0.1.5 fire>=0.6.0 mistral_common>=1.5.4 safetensors>=0.4.0 pillow>=10.3.0
 
 # Data / Checkpoint / Weight Download (URL)
 export MISTRAL_MODEL=$HOME/mistral_models

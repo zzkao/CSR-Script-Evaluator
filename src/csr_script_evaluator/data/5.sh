@@ -1,8 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/adobe/antialiased-cnns.git
-cd antialiased-cnns
-pip install -r requirements.txt
 
 # Data / Checkpoint / Weight Download (URL)
 wget https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh

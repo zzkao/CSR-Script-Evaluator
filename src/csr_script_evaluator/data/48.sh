@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install PyTorch
-conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
-# Install requirements
-pip install -r requirements.txt
-# Install PointNet++ CUDA modules
-cd lib/pointnet2 && python setup.py install && cd ../..
 
 # Data / Checkpoint / Weight Download (URL)
 # Download ScanRefer dataset (after getting access)

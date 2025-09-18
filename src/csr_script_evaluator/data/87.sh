@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install Torch per PyTorch selector
-pip install torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html || pip install torch==1.7.1
-
 # Install other requirements
 pip install -r requirements.txt
 

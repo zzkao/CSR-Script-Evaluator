@@ -1,16 +1,5 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-pip3 install "fschat[model_worker,webui]"
-git clone https://github.com/lm-sys/FastChat.git
-cd FastChat
-pip3 install --upgrade pip
-pip3 install -e ".[model_worker,webui]"
-pip3 install -e ".[train]"
-pip3 install -e ".[model_worker,llm_judge]"
-brew install rust cmake
-source /opt/intel/oneapi/setvars.sh
-source /usr/local/Ascend/ascend-toolkit/set_env.sh
-export FASTCHAT_USE_MODELSCOPE=True
+
 
 # Data / Checkpoint / Weight Download (URL)
 python3 download_mt_bench_pregenerated.py

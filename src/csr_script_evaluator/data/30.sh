@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install dependencies
-conda install -c pytorch pytorch torchvision
-conda install cython scipy
-conda install scikit-learn numpy pyyaml
-
-# Compile Cython sampler
-python graphsaint/setup.py build_ext --inplace
 
 # Data / Checkpoint / Weight Download (URL)
 # Create data directory

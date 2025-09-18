@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install dependencies
-pip3 install mtcnn
-conda install keras-gpu=2.1.0 tensorflow-gpu=1.10.0 cudnn=7.1.3 cuda80=1.0
-conda install numpy=1.15.2 opencv
-
 # Data / Checkpoint / Weight Download (URL)
 # Option 1: Download pre-processed data (recommended)
 mkdir -p data

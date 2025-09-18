@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install dependencies
-conda install -c pytorch pytorch torchvision
-conda install cython scipy
-pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-
 # Data / Checkpoint / Weight Download (URL)
 # Create directories for datasets
 mkdir -p path/to/imagenet

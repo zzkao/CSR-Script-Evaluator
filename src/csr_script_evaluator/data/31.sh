@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Create and activate conda environment
-conda create --name DAD-3DHeads python=3.8
-conda activate DAD-3DHeads
-
-# Clone repository and install dependencies
-git clone https://github.com/PinataFarms/DAD-3DHeads.git
-cd DAD-3DHeads
-pip install -r requirements.txt
 
 # Data / Checkpoint / Weight Download (URL)
 # Create dataset directory structure

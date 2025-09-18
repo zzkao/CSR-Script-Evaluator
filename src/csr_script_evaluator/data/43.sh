@@ -1,9 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/MIVRC/MSRN-PyTorch.git
-cd MSRN-PyTorch/MSRN
-pip install torch>=0.4.0 torchvision numpy scikit-image imageio matplotlib tqdm
-mkdir -p Train/dataset Test/model Test/LR/LRBI Test/HR Test/SR Test/OriginalTestData
 
 # Data / Checkpoint / Weight Download (URL)
 cd Train/dataset

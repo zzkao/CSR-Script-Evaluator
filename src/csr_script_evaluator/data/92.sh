@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Install dependencies (versions from README)
-pip install torch>=1.9.0
-pip install dgl>=0.7.2
-pip install pyyaml==5.4.1
+
 
 # Data / Checkpoint / Weight Download (URL)
 # Datasets will be downloaded automatically when running the code

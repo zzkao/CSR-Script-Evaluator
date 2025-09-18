@@ -1,13 +1,4 @@
 #!/bin/bash
-# Environment Setup / Requirement / Installation
-git clone https://github.com/wpeebles/gangealing.git
-cd gangealing
-export PYTHONPATH="${PYTHONPATH}:${PWD}"
-conda env create -f environment.yml
-conda activate gg
-pip install pillow scipy torchvision moviepy numpy opencv-python pandas plotly tensorboard tqdm wget lmdb ray ninja scikit-learn termcolor imageio==2.4.1
-mkdir -p data assets/averages assets/masks assets/objects
-
 # Data / Checkpoint / Weight Download (URL)
 python prepare_data.py --input_is_lmdb --lsun_category cat --out data/lsun_cats --size 512 --max_images 1000
 python prepare_data.py --spair_category cat --spair_split test --out data/spair_cats_test --size 256

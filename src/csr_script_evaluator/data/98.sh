@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Environment Setup / Requirement / Installation
-# Clone repository and setup conda environment
-git clone https://github.com/YyzHarry/SubpopBench.git
-cd SubpopBench/
-conda env create -f environment.yml
-conda activate subpop_bench
 
 # Data / Checkpoint / Weight Download (URL)
 # Download and prepare datasets (replace <data_path> with actual path)
