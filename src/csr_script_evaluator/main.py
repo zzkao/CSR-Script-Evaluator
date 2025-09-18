@@ -31,6 +31,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-n", "--number", type=int, required=False, help="Force run the exact test script number")
     parser.add_argument("--apikey", type=str, required=True, help="Input your anthropic API key")
+    parser.add_argument("-v", "--verbose", action='store_true', help="See full history of command execution")
     args = parser.parse_args()
 
     APIKEY = args.apikey
@@ -65,7 +66,8 @@ def main():
             success += 1
         
     total = len(commands)
-    for i in history:
-        print(i.to_dict())
+    if args.verbose:
+        for i in history:
+            print(i.to_dict())
     print(f"Final Result: {success} / {total}")
     
