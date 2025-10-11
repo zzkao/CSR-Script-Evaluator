@@ -62,8 +62,8 @@ def main():
     executor = CommandExecutor(commands=commands, timeout=timeout)
     stdouts, stderrs = executor.run()
 
-    print(stdouts)
-    print(stderrs)
+    # print(stdouts)
+    # print(stderrs)
 
     history = []
     success = 0
@@ -74,7 +74,6 @@ def main():
 
         if '__TIMEOUT__' in stderr: # Autopass on timeouts
             success += 1
-
             continue
         else:
             eval = evaluator.query(bash_script=command, stdout=stdout, stderr=stderr)
