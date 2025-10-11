@@ -1,6 +1,6 @@
 from .core_agent import CoreAgent
 
-SYSTEM_PROMPT = """
+EVALUATOR_SYSTEM_PROMPT = """
 You are a strict evaluator of bash script executions.
 You will be given:
 
@@ -36,7 +36,7 @@ class ScriptEvaluator():
     Given a bash script and terminal output, determine if the script executed properly
     """
     def __init__(self, api_key: str):
-        self.LLM = CoreAgent(model_id="claude-sonnet-4-20250514", api_key=api_key)
+        self.evaluation_LLM = CoreAgent(model_id="claude-sonnet-4-20250514", api_key=api_key)
         self.name = "test_script_agent"
 
     def _get_last_100_lines(self, text: str):
@@ -44,14 +44,14 @@ class ScriptEvaluator():
         last_100_lines = lines[-100:]
         result = "\n".join(last_100_lines)
         return result
-    
+
     def query(self, bash_script: str, stdout: str, stderr: str):
         prompt = PROMPT_TEMPLATE.format(bash_script=bash_script,
                                         stdout=self._get_last_100_lines(stdout),
                                         stderr=self._get_last_100_lines(stderr)
                                         )
-        message = self.LLM.query(input_str=prompt,
-                                  system_prompt=SYSTEM_PROMPT
+        message = self.evaluation_LLM.query(input_str=prompt,
+                                  system_prompt=EVALUATOR_SYSTEM_PROMPT
                                   )      
         eval = message.content[0].text
         if 'SUCCESS' in eval:
