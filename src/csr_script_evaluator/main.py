@@ -57,13 +57,11 @@ def main():
 
 
     # Run commands
-    print('RUNNING TEST SCRIPTS')
+    if args.verbose:
+        print('RUNNING TEST SCRIPTS')
     evaluator = ScriptEvaluator(api_key=APIKEY)
     executor = CommandExecutor(commands=commands, timeout=timeout)
     stdouts, stderrs = executor.run()
-
-    # print(stdouts)
-    # print(stderrs)
 
     history = []
     success = 0
