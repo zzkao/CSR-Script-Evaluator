@@ -47,7 +47,7 @@ class CommandExecutor():
             self.proc.stdin.flush()
 
             # Send the command
-            self.proc.stdin.write(f"timeout {self.timeout}s {cmd} || echo '__TIMEOUT__' >&2\n") # ADJUST TIMEOUT
+            self.proc.stdin.write(f"timeout {self.timeout}s {cmd} || [ $? -eq 124 ] && echo '__TIMEOUT__' >&2\n") # Run cmd and enforce timeout
             self.proc.stdin.flush()
 
 
