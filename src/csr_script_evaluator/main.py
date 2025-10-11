@@ -72,8 +72,9 @@ def main():
         stdout = stdouts[i]
         stderr = stderrs[i]
 
-        if stderr == '__TIMEOUT__': # Autopass on timeouts
+        if '__TIMEOUT__' in stderr: # Autopass on timeouts
             success += 1
+
             continue
         else:
             eval = evaluator.query(bash_script=command, stdout=stdout, stderr=stderr)

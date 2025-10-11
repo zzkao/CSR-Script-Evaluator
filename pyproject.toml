@@ -7,7 +7,7 @@ name = "CSR-Script-Evaluator"
 version = "1.0.0"
 description = "LLM evaluator for CSR benchmark"
 readme = "README.md"
-requires-python = ">=3.5"
+requires-python = ">=3.8"
 authors = [
     { name = "Zhaomeng Chen", email = "zhaochen@ucla.edu" }
 ]
