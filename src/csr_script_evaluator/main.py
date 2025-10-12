@@ -5,6 +5,7 @@ import argparse
 from importlib import resources
 from .state import *
 import sys
+import json
 
 def read_test_script_commands(bash_file):
         commands = []
@@ -86,5 +87,14 @@ def main():
     if args.verbose:
         for i in history:
             print(i.to_dict())
+    
+    # Logging
+    log_data = {
+        "states": [s.to_dict() for s in history],
+        "summary": {"success": success, "total": total}
+    }
+    with open("results.json", "w") as f:
+        json.dump(log_data, f, indent=2)
+
     print(f"Final Result: {success} / {total}")
     
