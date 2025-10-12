@@ -1,21 +1,17 @@
 from typing import Optional
 
 class Action:
-    def __init__(self, command: str,  description: Optional[str] = None, ):
+    def __init__(self, command: str):
         self.command = command
-        self.description = description
     
     def to_dict(self):
-        return {"command": self.command, "description": self.description}
+        return {"command": self.command}
 
     def __str__(self):
         parts = []
 
         if self.command and self.command.strip():
             parts.append(f"command:\n{self._indent(self.command)}")
-        if self.description and self.description.strip():
-            parts.append(f"description:\n{self._indent(self.description)}")
-
         return "\n".join(parts)
 
     @staticmethod

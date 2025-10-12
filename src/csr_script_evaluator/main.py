@@ -90,8 +90,8 @@ def main():
     
     # Logging
     log_data = {
-        "states": [s.to_dict() for s in history],
-        "summary": {"success": success, "total": total}
+        "summary": {"success": success, "total": total},
+        "states": [s.to_dict() for s in history]
     }
     with open("results.json", "w") as f:
         json.dump(log_data, f, indent=2)
