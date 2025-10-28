@@ -1,27 +1,11 @@
 #!/bin/bash
 
-# Data / Checkpoint / Weight Download (URL)
-mkdir -p /data/imagenet/train /data/imagenet/val
-wget -O resnet50_1kpretrained_timm_style.pth "https://drive.google.com/uc?export=download&id=1H8605HbxGvrsu4x4rIoNr-Wkd7JkxFPQ"
-wget -O convnextS_1kpretrained_official_style.pth "https://drive.google.com/uc?export=download&id=1Ah6lgDY5YDNXoXHQHklKKMbEd08RYivN"
-wget -O res50_withdecoder_1kpretrained_spark_style.pth "https://drive.google.com/uc?export=download&id=1STt3w3e5q9eCPZa8VzcJj1zG6p3jLeSF"
-
-# Training
-cd pretrain
-python3 main.py --exp_name=debug --data_path=/data/imagenet --model=resnet50 --bs=32 --epochs=1
-torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 --master_addr=localhost --master_port=12345 main.py --data_path=/data/imagenet --exp_name=resnet50_pretrain --exp_dir=./logs --model=resnet50 --bs=64 --epochs=1
-torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 --master_addr=localhost --master_port=12346 main.py --data_path=/data/imagenet --exp_name=convnext_small_pretrain --exp_dir=./logs --model=convnext_small --bs=32 --epochs=1
-torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 --master_addr=localhost --master_port=12347 main.py --data_path=/data/imagenet --exp_name=convnext_large_384 --exp_dir=./logs --model=convnext_large --input_size=384 --mask=0.75 --bs=32 --base_lr=4e-4 --epochs=1
-
 # Inference / Demonstration
-cd ..
-python -c "import torch, timm; res50, state = timm.create_model('resnet50'), torch.load('resnet50_1kpretrained_timm_style.pth', 'cpu'); res50.load_state_dict(state.get('module', state), strict=False); print('ResNet50 loaded successfully')"
-python -c "import torch, timm; model = timm.create_model('convnext_small'); state = torch.load('convnextS_1kpretrained_official_style.pth', 'cpu'); model.load_state_dict(state.get('module', state), strict=False); print('ConvNeXt-Small loaded successfully')"
-jupyter nbconvert --to notebook --execute pretrain/viz_reconstruction.ipynb --output viz_reconstruction_executed.ipynb
-jupyter nbconvert --to notebook --execute pretrain/viz_spconv.ipynb --output viz_spconv_executed.ipynb
+python - <<'EOF'
+from mmpretrain import inference_model
+predict = inference_model('resnet50_spark-pre_300e_in1k','demo/bird.JPEG')
+print(predict['pred_class'], predict['pred_score'])
+EOF  # using the demo snippet from docs :contentReference[oaicite:3]{index=3}
 
 # Testing / Evaluation
-cd downstream_imagenet
-torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 --master_addr=localhost --master_port=12348 main.py --data_path=/data/imagenet --exp_name=resnet50_finetune --exp_dir=./logs --model=resnet50 --resume_from=../resnet50_1kpretrained_timm_style.pth --epochs=1 --bs=32
-torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 --master_addr=localhost --master_port=12349 main.py --data_path=/data/imagenet --exp_name=convnext_small_finetune --exp_dir=./logs --model=convnext_small --resume_from=../convnextS_1kpretrained_official_style.pth --epochs=1 --bs=16
-tensorboard --logdir ./logs/tensorboard_log --port 6006 --host 0.0.0.0 &
+python tools/test.py configs/spark/benchmarks/resnet50_8xb256-coslr-300e_in1k.py resnet50_8xb256-coslr-300e_in1k_20230612-f86aab51.pth
