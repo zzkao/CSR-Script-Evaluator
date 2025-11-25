@@ -16,6 +16,7 @@ Your job is to decide **only** whether the script executed successfully or not.
 
 * Do not explain your reasoning.
 * Do not output anything except `SUCCESS` or `FAILED`.
+* Empty outputs are considered `SUCCESS`
 * Assume any nonzero exit code, error messages, stack traces, command not found, or similar indications mean failure.
 * If uncertain, default to `FAILED`.
 """
@@ -62,4 +63,4 @@ class ScriptEvaluator():
 
 if __name__ == "__main__":
     agent = ScriptEvaluator()
-    agent.query("ls", "data/")
+    agent.query("ls", "data2/")
