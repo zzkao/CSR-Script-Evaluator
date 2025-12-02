@@ -43,6 +43,7 @@ class CommandExecutor():
         self.proc.stdin.write("" + "\n")
         self.proc.stdin.flush()
         for i, cmd in enumerate(self.commands):
+            print(f'RUNNING {cmd}')
             self.proc.stdin.write(f"echo \"{self.rand_str}{i}\"; echo \"{self.rand_str}{i}\" >&2\n")
             self.proc.stdin.flush()
 
